@@ -1,0 +1,54 @@
+.square {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0; /* Prevent shrinking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  text-align: center;
+  background-color: #34d399; /* Mint green */
+  border-radius: 12px; /* Rounded corners */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: #10b981; /* Darker green on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Selected square style */
+.selected {
+  background-color: #84cc16; /* Bright lime green */
+  color: black;
+  box-shadow: 0px 0px 12px rgba(132, 204, 22, 0.7); /* Glowing effect */
+  transform: scale(1.1); /* Slightly enlarge when selected */
+}
+
+.dateNumber {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.monthLabel {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* Top-right: Weekday */
+.dayLabel {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
