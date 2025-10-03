@@ -1,0 +1,14 @@
+.scrollingContainer {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  background-color: #f4f7fb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scrollingRow {
+  display: inline-flex;
+  gap: 10px;
+}
