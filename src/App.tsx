@@ -1,17 +1,16 @@
-import { useState } from "react";
-import DayPicker from "./components/DayPicker/DayPicker";
-import { useCalendar } from "./components/DayPicker/hooks/useCalendar";
+import { Outlet, NavLink } from "react-router-dom";
 
 function App() {
-  const [selectedDay, setSelectedDay] = useState(new Date());
-  const dates = useCalendar(selectedDay);
-
   return (
-    <DayPicker
-      days={dates}
-      selectedDay={selectedDay}
-      onDayChange={setSelectedDay}
-    />
+    <>
+      <nav>
+        <NavLink to="/">Calendar</NavLink> |{" "}
+        <NavLink to="/manage">Settings</NavLink>
+      </nav>
+
+      {/* where nested routes render */}
+      <Outlet />
+    </>
   );
 }
 
