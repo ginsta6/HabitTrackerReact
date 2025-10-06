@@ -10,7 +10,7 @@ function App() {
     <DayPicker
       days={dates}
       selectedDay={selectedDay}
-      onChange={setSelectedDay}
+      onDayChange={setSelectedDay}
     />
   );
 }

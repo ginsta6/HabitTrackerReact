@@ -1,4 +1,4 @@
-import styles from "./DayButton.module.css"
+import styles from "./DayButton.module.css";
 
 interface Props {
   dayLabel: string;
@@ -6,16 +6,28 @@ interface Props {
   dayNum: number;
   onClick: () => void;
   selected: boolean;
+  disabled: boolean;
 }
 
-function DayButton({dayLabel, monLabel, dayNum, onClick, selected}: Readonly<Props>) {
+function DayButton({
+  dayLabel,
+  monLabel,
+  dayNum,
+  onClick,
+  selected,
+  disabled,
+}: Readonly<Props>) {
   return (
-    <div className={`${styles.square} ${selected ? styles.selected : ""}`} onClick={onClick}>
-        <div className={styles.dayLabel}>{dayLabel}</div>
-        <div className={styles.monthLabel}>{monLabel}</div>
-        <div className={styles.dateNumber}>{dayNum}</div>
+    <div
+      className={`${styles.square} ${selected ? styles.selected : ""}
+        ${disabled ? styles.disabled : ""}`}
+      onClick={onClick}
+    >
+      <div className={styles.dayLabel}>{dayLabel}</div>
+      <div className={styles.monthLabel}>{monLabel}</div>
+      <div className={styles.dateNumber}>{dayNum}</div>
     </div>
-  )
+  );
 }
 
-export default DayButton
+export default DayButton;
