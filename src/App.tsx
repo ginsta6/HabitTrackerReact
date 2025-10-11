@@ -1,12 +1,10 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet,  } from "react-router-dom";
+import Navbar from "./components/DayPicker/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <nav>
-        <NavLink to="/">Calendar</NavLink> |{" "}
-        <NavLink to="/manage">Settings</NavLink>
-      </nav>
+      <Navbar></Navbar>
 
       {/* where nested routes render */}
       <Outlet />
