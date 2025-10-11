@@ -4,7 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-// import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 
 
