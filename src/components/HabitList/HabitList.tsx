@@ -1,35 +1,43 @@
 import styles from "./HabitList.module.css";
 import HabitListItem from "./HabitListItem/HabitListItem";
+import { useProgressForDate } from "../../queries/progress";
+import { useParams } from "react-router-dom";
 
 function HabitList() {
+  const { date } = useParams();
+  const { data: progress, isLoading } = useProgressForDate(date ?? "");
+  const entries = progress ? Object.entries(progress) : [];
 
-
-  return (
-    <div className={styles.habitListContainer}>
-      {/* if loading */}
-      <div
-        //   v-if="isLoading"
-        className={styles.loadingState}
-      >
+  if (isLoading)
+    return (
+      <div className={styles.loadingState}>
         <div className={styles.spinner}></div>
         <p>Loading habits...</p>
       </div>
-      {/* else this */}
+    );
+
+  if (entries.length === 0) {
+    return (
+      <div className={styles.emptyState}>
+        <p>
+          No habits for this day. Add habits in the Habit Management section.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.habitListContainer}>
       <div>
-        {/* if empty */}
-        <div
-          // v-if="currentHabits.length === 0"
-          className={styles.emptyState}
-        >
-          <p>
-            No habits for this day. Add habits in the Habit Management
-            section.
-          </p>
-        </div>
-        {/* else this */}
-        {/* list of entry components mapped with a list from backend */}
         <div className={styles.habitList}>
-          <HabitListItem />
+          {entries.map(([id, p]) => (
+            <HabitListItem
+              key={id}
+              habitName={p.name}
+              habitCompleted={p.completed}
+              habitActive={p.wasActiveOnDate}
+            />
+          ))}
         </div>
       </div>
     </div>
