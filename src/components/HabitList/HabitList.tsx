@@ -33,6 +33,7 @@ function HabitList() {
           {entries.map(([id, p]) => (
             <HabitListItem
               key={id}
+              habitId={Number(id)}
               habitName={p.name}
               habitCompleted={p.completed}
               habitActive={p.wasActiveOnDate}
