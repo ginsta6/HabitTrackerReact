@@ -2,6 +2,8 @@ import styles from "./HabitList.module.css";
 import HabitListItem from "./HabitListItem/HabitListItem";
 
 function HabitList() {
+
+
   return (
     <div className={styles.habitListContainer}>
       {/* if loading */}
