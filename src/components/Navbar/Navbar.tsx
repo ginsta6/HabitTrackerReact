@@ -57,7 +57,7 @@ function Navbar() {
 
             <li className="nav-item">
               <NavLink
-                to="/manage-habits"
+                to="/manage"
                 className={({ isActive }) =>
                   `${styles.navLink}${
                     isActive ? " active" : ""

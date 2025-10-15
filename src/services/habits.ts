@@ -4,7 +4,7 @@ export type Habit = {
   id: number;
   name: string;
   active: boolean;
-  created_at?: string;
+  createdAt?: string;
 };
 
 // GET /habits

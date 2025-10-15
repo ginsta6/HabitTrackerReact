@@ -1,5 +1,5 @@
 import type { LoaderFunctionArgs } from "react-router-dom";
-import { parseDateParam, isFuture } from "../utils/date";
+import { parseDateParam, isFuture } from "../../utils/date";
 
 export async function HabitViewerLoader({
   params,

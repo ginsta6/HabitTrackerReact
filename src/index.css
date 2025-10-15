@@ -60,13 +60,6 @@ button:hover {
   box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1);
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 /* Responsive text */
 @media (max-width: 768px) {
   body {

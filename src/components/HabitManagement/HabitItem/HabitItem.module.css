@@ -1,0 +1,78 @@
+.habitItem {
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.editMode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.editFields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.editButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewMode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.habitName {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.habitName.inactive {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.habitMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.metaInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.statusIndicator {
+  font-size: 0.8rem;
+  color: #666;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+}
+
+.statusIndicator.active {
+  color: #28a745;
+  background-color: #e8f5e9;
+}
+
+.creationDate {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.habitActions {
+  display: flex;
+  gap: 0.25rem;
+}
